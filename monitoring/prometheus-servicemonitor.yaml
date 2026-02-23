@@ -1,0 +1,17 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: cloud-native-api
+  namespace: cloud-native
+  labels:
+    app: cloud-native-api
+    release: prometheus
+spec:
+  selector:
+    matchLabels:
+      app: cloud-native-api
+  endpoints:
+  - port: http
+    path: /metrics
+    interval: 30s
+    scrapeTimeout: 10s

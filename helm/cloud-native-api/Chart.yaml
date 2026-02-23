@@ -1,0 +1,13 @@
+apiVersion: v2
+name: cloud-native-api
+description: A Helm chart for Cloud Native Microservice API
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+keywords:
+  - microservice
+  - api
+  - cloud-native
+maintainers:
+  - name: Suma Mallu
+    email: sumareddymallu@gmail.com

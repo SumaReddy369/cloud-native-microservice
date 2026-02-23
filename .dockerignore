@@ -1,0 +1,32 @@
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Build artifacts
+bin/
+*.exe
+coverage.txt
+*.test
+
+# Documentation (not needed in image)
+*.md
+!README.md
+
+# CI/CD (not needed in image)
+.github
+
+# Kubernetes and Helm (deploy separately)
+k8s/
+helm/
+monitoring/
+
+# Misc
+Makefile
+.golangci.yml
+.dockerignore
