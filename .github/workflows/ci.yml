@@ -52,7 +52,11 @@ jobs:
       run: golangci-lint run --timeout=5m
 
     - name: Build
-      run: go build -v ./cmd/api
+      run: |
+        echo "Working directory:" && pwd
+        echo "Directory contents:" && ls -la
+        echo "cmd/api contents:" && ls -la cmd/api 2>/dev/null || echo "cmd/api not found"
+        go build -v -o api ./cmd/api
 
   build:
     name: Build and Push Docker Image
